@@ -98,29 +98,64 @@ compareHard(88, 58)
 Task 11 : Write a program that uses the && operator to combine two conditions and log the result.
  */
 
-let someNum = false;
-let anotherNum = true;
-console.log(someNum && anotherNum);
+function isPos(num){
+    return num > 0;
+}
+function isEven(num){
+    return num % 2 === 0;
+}
 
+let number = 76;
+let poseven = isEven(number) && isPos(number);
+console.log(`${number} is positive and even ${poseven}`);
 
 /*
 Task 12 : Write a program that uses the || operator to combine two conditions and log the result.
  */
-console.log(someNum || anotherNum);
+
+let nums = 57;
+let checkNum = isPos(nums) || isEven(nums)
+console.log(checkNum);
 
 /*
 Task 13 : Write a program that uses the ! operator to negate a condition and log the result.
  */
-console.log(!someNum);
+
+let negNum = -5;
+let isNeg = !isPos(negNum)
+console.log(`Is ${negNum} is positive Num : ${isPos(negNum)}`);
+console.log(`Is ${negNum} is not positive Num : ${isNeg}`);
+
+
 
 /*
 Task 14 : Write a program that uses the ternary operator to check if a number is positive or negative and log the result.
  */
 
+let checkNums = 57;
+let checkTernary = isPos(checkNum) ? "Positive" : "Negative"
+console.log(checkTernary);
+
+
 
 /*
 Task 15 : Write a script that perform basic arithmetic operations (addition, substraction, multiplication, division and remainder) on two numbers and log the results.
  */
+
+let num1 = 85;
+let num2 = 16;
+
+let addition = num1 + num2;
+let substraction = num1 - num2;
+let multiplication = num1 * num2;
+let division = num1 / num2;
+let remainder = num1 % num2;
+
+console.log("Addition :",  addition);
+console.log("Substraction :",  substraction);
+console.log("Multiplication :",  multiplication);
+console.log("Division :",  division);
+console.log("Remainder :",  remainder);
 
 
 /*
@@ -128,6 +163,32 @@ Task 16 : Create a script that compares two numbers using different comparison o
  */
 
 
+let isEqual = (num1 === num2)
+let isNotEqual = (num1 !== num2)
+let isGreater = (num1 > num2)
+let isSmaller = (num1 < num2)
+let isGreaterEqual = (num1 >= num2)
+let isSmallerEqual = (num1 <= num2)
+
+let andOperator = (num1 > num2) && (num1 !== num2)
+let orOperator = (num1 < num2) || (num1 === num2)
+let notOperator = !(num1 === num2)
+
+console.log("Is Equal : ", isEqual);
+console.log("Is Not Equal : ", isNotEqual);
+console.log("Is Greater : ", isGreater);
+console.log("Is Smaller : ", isSmaller);
+console.log("Is Greater and Equal : ", isGreaterEqual);
+console.log("Is Smaller and Equal : ", isSmallerEqual);
+console.log("Is And operator : ", andOperator);
+console.log("Is Or Operator : ", orOperator);
+console.log("Is Not Operator : ", notOperator);
+
+
 /*
 Task 17 : Write a script that uses the ternary operator to determine if a number is positive or negative and log the result.
  */
+
+let numbers = -83;
+let ternaryCheck = isPos(numbers) ? "Positive" : "Negative"
+console.log(ternaryCheck);
