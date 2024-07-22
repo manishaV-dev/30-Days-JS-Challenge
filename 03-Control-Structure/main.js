@@ -26,6 +26,8 @@ function checkVotingAge(age) {
   }
 }
 
+checkVotingAge(25)
+
 /*
 Task 3 : Write a program to find the largest of three number using nested if-else statements and log the result to the console
  */
