@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event handling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body data-bs-theme="dark">
+    <div class="container">
+      <div class="text-center mt-5 mb-4"><h1>Event Handling</h1></div>
+      <div class="row mt-4">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-danger-emphasis">
+                Change the text content of a paragraph on click
+              </h4>
+              <p class="card-text paraText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                deserunt ipsum, praesentium nobis qui asperiores? Eveniet
+                repellat nulla cumque mollitia.
+              </p>
+              <button class="btn btn-secondary" id="changeBtn">
+                Change Text
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <div class="p-2" id="imgDiv" style="height: 270px">
+              <h6 class="card-title text-success-emphasis">
+                double-click event listener to an image that toggles its
+                visibility.
+              </h6>
+              <img
+                src="img-1.jpg"
+                class="card-img-top w-100"
+                style="height: 200px"
+                alt="nature"
+                id="myImage"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card" id="cardBg">
+            <div class="card-body">
+              <h4 class="card-title text-danger-emphasis">
+                mouseover - that changes its background color.
+              </h4>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-danger-emphasis mb-3">
+                keydown - logs the key pressed to the console.
+              </h4>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username"
+                id="inputField"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+
+              <p class="mt-4 inputResult">Key Pressed :</p>
+              <p class="mt-2 inputValue">Input Value :</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-danger-emphasis mb-3">
+                submit - to a form that prevents the default submission
+              </h4>
+              <form id="form">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    name="email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+              <p class="mt-4 emailBox">Email is :</p>
+              <p class="mt-2 passwordBox">Password is :</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="options"
+              >
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <p class="mt-4" id="selectedValue">
+                Selected value will appear here
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-group" id="listItems">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+              </ul>
+
+              <p id="listResult" class="mt-4">Clicked Li Value :</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div id="parent">
+                <div class="childElement">Child 1</div>
+                <div class="childElement">Child 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
