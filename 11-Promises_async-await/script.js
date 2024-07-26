@@ -48,6 +48,45 @@ promiseReject.catch((error) => {
 /*
 Task 3: Create a sequence of promises that simulate fetching data from a server. Chain the promises to log message in s specific order.
 */
+// Simulate fetching data from a server with a promise
+function fetchData(url, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network Response was on OK");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(`Fetched Data from ${url}`);
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(`Failed to fetched data from ${url} : ${error.message}`);
+        });
+    }, delay);
+  });
+}
+
+// Chain the promises to log messages in a specific order
+fetchData("https://jsonplaceholder.typicode.com/posts/1", 1000)
+  .then((data1) => {
+    console.log("Data 1 Processed : ", data1);
+    return fetchData("https://jsonplaceholder.typicode.com/posts/2", 2000);
+  })
+  .then((data2) => {
+    console.log("Data 2 processed:", data2);
+    return fetchData("https://jsonplaceholder.typicode.com/posts/3", 1500);
+  })
+  .then((data3) => {
+    console.log("Data 3 processed:", data3);
+    console.log("All data fetched and processed");
+  })
+  .catch((error) => {
+    console.log("An error occurred:", error);
+  });
 
 /*
 Task 4: Write an async function that waits for a promise to resolve and then logs the resolved value.
